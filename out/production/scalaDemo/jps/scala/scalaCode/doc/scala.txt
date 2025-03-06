@@ -1,0 +1,36 @@
+
+演示代码 Hello.scala
+
+object Hello {
+    def main(args: Array[String]): Unit = {
+        println("Hello, Scala!")
+    }
+}
+
+方法一
+scala Hello.scala
+
+方法二
+scala 进入交互式解析器中
+:load Hello.scala
+构造一个Hello.main(Array("abc"))
+
+方法三
+scalac Hello.scala
+scala Hello
+
+方法四
+Linux中可以运行
+java -classpath .:/export/servers/scala-2.12.8/lib/scala-library.jar Hello
+或
+java -cp /export/servers/scala-2.12.8/lib/scala-library.jar:. Hello
+
+Windows中目前没有成功，不知原因，待解决。
+java -classpath .;D:\software\scala-all\scala-2.11.8\lib\scala-library.jar Hello
+
+备注：没输出，也没报错，好奇怪。
+
+加了 -verbose:class 也没发现错误
+java -verbose:class -classpath .;D:\software\scala-all\scala-2.11.8\lib\scala-library.jar Hello
+
+日期：2025.02.21
